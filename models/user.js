@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  workouts: { type: Number, default: 0 },
-  minutes: { type: Number, default: 0 }
+  userName: { type: String, required: true },
+  workoutType: { type: [String], required: true },
+  workoutMinutes: { type: Number, required: true }
 });
 
 module.exports = mongoose.model('User', UserSchema);
